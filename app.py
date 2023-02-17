@@ -16,7 +16,15 @@ def math_operation():
         operation=request.json['operation']
         num1=request.json['num1']
         num2=request.json['num2']
-        result=num1+num2
+        result=0
+        
+        if operation=="add":
+            result=num1+num2
+        elif operation=="multiply":
+            result=num1*num2
+        elif operation=="division":
+            result=num1/num2
+        
 
         return "The operation is {} and the result is {}".format(operation,result)
 
